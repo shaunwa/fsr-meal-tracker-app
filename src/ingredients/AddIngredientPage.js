@@ -52,10 +52,10 @@ export const AddIngredientPage = () => {
                 className="space-before full-width"
                 onChange={e => setUnits(e.target.value)}
                 options={unitOptions} />
-            <Button
+            <button
                 className="space-before full-width"
                 onClick={addToIngredients}
-            >Add</Button>
+            >Add</button>
         </CenteredContainer>
     );
 }

@@ -12,18 +12,20 @@ const datesAreSameDay = (date1, date2) =>
         & date1.getMonth() === date2.getMonth()
         && date1.getDate() === date2.getDate();
 
-export const MealsList = ({ meals, onDelete }) => (
+export const MealsList = ({ meals, isLoading, onDelete }) => (
     <div className="list-container">
         <h1>Planned Meals</h1>
-        {next7Days.map((date, index) => {
-            const mealForDay = meals.find(meal => datesAreSameDay(date, meal.plannedDate))
-            return (
-                <MealsListItem
-                    key={index}
-                    meal={mealForDay}
-                    date={date}
-                    onDelete={onDelete} />
-            );
-        })}
+        {isLoading
+            ? <p>Loading...</p>
+            : next7Days.map((date, index) => {
+                const mealForDay = meals.find(meal => datesAreSameDay(date, meal.plannedDate))
+                return (
+                    <MealsListItem
+                        key={index}
+                        meal={mealForDay}
+                        date={date}
+                        onDelete={onDelete} />
+                );
+            })}
     </div>
 );

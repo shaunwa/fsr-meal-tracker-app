@@ -24,10 +24,10 @@ export const RecipeSearchPage = () => {
                 placeholder="Enter keyword here"
                 value={searchInputValue}
                 onChange={e => setSearchInputValue(e.target.value)} />
-            <Button
+            <button
                 className="full-width space-after"
                 onClick={onSearchClicked}
-            >Search</Button>
+            >Search</button>
             <RecipeSearchResultsList
                 recipes={searchResults}
                 ingredients={ingredients} />

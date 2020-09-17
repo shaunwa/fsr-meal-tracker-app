@@ -16,5 +16,5 @@ export const useShoppingList = () => {
         loadShoppingList();
     }, []);
 
-    return items;
+    return { isLoading, items };
 }
