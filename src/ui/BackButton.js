@@ -5,6 +5,6 @@ export const BackButton = () => {
     const history = useHistory();
 
     return (
-        <button onClick={history.goBack}>Back</button>
+        <button className="back-button" onClick={history.goBack}>Back</button>
     )
 }

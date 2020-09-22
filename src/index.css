@@ -54,14 +54,15 @@ a {
 .page {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .centered-container {
   max-width: 750px;
   margin: auto;
+}
+
+.back-button {
+  margin: 16px;
 }
 
 .page-container {
@@ -89,9 +90,10 @@ a {
 }
 
 .list-item > p {
-  display: flex;
   align-items: center;
+  display: flex;
   flex: 6;
+  padding-left: 16px;
 }
 
 .list-item > .right-action {
@@ -114,7 +116,7 @@ a {
 
 .the-x {
   font-weight: bold;
-  left: 8px;
+  left: 7px;
   position: absolute;
   top: 2px;
 }

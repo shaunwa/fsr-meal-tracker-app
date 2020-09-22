@@ -37,25 +37,30 @@ export const AddIngredientPage = () => {
     };
 
     return (
-        <CenteredContainer>
-            <h1>Add Ingredient</h1>
-            <TextInput
-                placeholder="Enter ingredient name here"
-                className="space-after space-before full-width"
-                value={name}
-                onChange={e => setName(e.target.value)} />
-            <NumberInput
-                className="space-before full-width"
-                value={amount}
-                onChange={e => setAmount(e.target.value)} />
-            <Dropdown
-                className="space-before full-width"
-                onChange={e => setUnits(e.target.value)}
-                options={unitOptions} />
-            <button
-                className="space-before full-width"
-                onClick={addToIngredients}
-            >Add</button>
-        </CenteredContainer>
+        <div className="page">
+            <BackButton />
+            <div className="centered-container">
+                <h1>Add Ingredient</h1>
+                <input
+                    type="text"
+                    placeholder="Enter ingredient name here"
+                    className="space-after space-before full-width"
+                    value={name}
+                    onChange={e => setName(e.target.value)} />
+                <input
+                    type="number"
+                    className="space-before full-width"
+                    value={amount}
+                    onChange={e => setAmount(e.target.value)} />
+                <Dropdown
+                    className="space-before full-width"
+                    onChange={e => setUnits(e.target.value)}
+                    options={unitOptions} />
+                <button
+                    className="space-before full-width"
+                    onClick={addToIngredients}
+                >Add</button>
+            </div>
+        </div>
     );
 }
