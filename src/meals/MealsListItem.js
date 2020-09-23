@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, SmallX } from '../ui';
+import { SmallX } from '../ui';
 
 export const MealsListItem = ({ meal, date, onDelete }) => (
     <div className="list-item">

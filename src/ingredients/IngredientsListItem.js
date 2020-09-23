@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumberInput, SmallX } from '../ui';
+import { SmallX } from '../ui';
 
 export const IngredientsListItem = ({ ingredient, onDelete }) => {
     return (

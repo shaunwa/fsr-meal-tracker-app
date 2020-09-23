@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../ui';
 import { IngredientsListItem } from './IngredientsListItem';
 
 export const IngredientsList = ({ ingredients, isLoading, onDelete }) => {

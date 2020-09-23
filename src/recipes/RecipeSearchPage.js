@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BackButton, Button, CenteredContainer, TextInput } from '../ui';
+import { BackButton } from '../ui';
 import { useIngredients } from '../ingredients';
 import { RecipeSearchResultsList } from './RecipeSearchResultsList';
 import { useRecipeSearchResults } from './useRecipeSearchResults';
@@ -7,8 +7,8 @@ import { useRecipeSearchResults } from './useRecipeSearchResults';
 export const RecipeSearchPage = () => {
     const [searchString, setSearchString] = useState('');
     const [searchInputValue, setSearchInputValue] = useState('');
-    const { ingredients, setIngredients } = useIngredients();
-    const { isLoading, searchResults } = useRecipeSearchResults(searchString);
+    const { ingredients } = useIngredients();
+    const { searchResults } = useRecipeSearchResults(searchString);
 
     const onSearchClicked = () => {
         setSearchString(searchInputValue);

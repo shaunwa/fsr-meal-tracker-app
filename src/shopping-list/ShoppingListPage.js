@@ -1,5 +1,5 @@
 import React from 'react';
-import { CenteredContainer, BackButton } from '../ui';
+import { BackButton } from '../ui';
 import { useShoppingList } from './useShoppingList';
 
 export const ShoppingListPage = () => {
@@ -7,6 +7,7 @@ export const ShoppingListPage = () => {
 
     return (
         <div className="page">
+            <BackButton />
             <div className="centered-container">
                 <h1>Here's Your Shopping List:</h1>
                 {isLoading
