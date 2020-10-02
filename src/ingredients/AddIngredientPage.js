@@ -20,7 +20,7 @@ export const AddIngredientPage = () => {
     const history = useHistory();
 
     const addToIngredients = async () => {
-        const newIngredient = { name, amount, units };
+        const newIngredient = { name: name.toLowerCase(), amount, units };
         await fetch('/ingredients', {
             method: 'post',
             body: JSON.stringify(newIngredient),
